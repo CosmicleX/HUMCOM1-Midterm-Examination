@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Media - Xander's Midterm Portfolio</title>
+    <title>Contact - Xander's Midterm Portfolio</title>
     <style>
         header, footer {
             background-color: #22252A;
@@ -43,17 +43,33 @@
     <hr class="header-divider">
 
     <div class="card-container">
-        <img src="mediaphoto.png" alt="Media profile of Xander" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+        <img src="Triatots4.png" alt="Contact Xander" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
         
-        <h1>Media Showcase</h1>
+        <h1>Contact Details</h1>
         
-        <figure>
-            <audio controls>
-                <source src="Velune.mp3" type="audio/mpeg">
-                <source src="Velune.mp3" type="audio/ogg">
-            </audio>
-            <figcaption style="margin-top: 10px;"><em>Figure 1: Audio introduction detailing portfolio architecture.</em></figcaption>
-        </figure>
+        <form action="/submit-contact-form" method="POST">
+            <fieldset>
+                <legend>Contact Form</legend>
+                
+                <label for="fullName">Full Name *</label><br>
+                <input type="text" id="fullName" name="fullName" required minlength="3"><br><br>
+
+                <label for="emailAddress">Email Address *</label><br>
+                <input type="email" id="emailAddress" name="emailAddress" required><br><br>
+
+                <label for="inquiryType">Select Inquiry Type</label><br>
+                <select id="inquiryType" name="inquiryType">
+                    <option value="general">General Inquiry</option>
+                    <option value="project">Project Proposal</option>
+                    <option value="feedback">Feedback</option>
+                </select><br><br>
+
+                <label for="message">Message *</label><br>
+                <textarea id="message" name="message" required minlength="3"></textarea><br><br>
+
+                <button type="submit">Send Message</button>
+            </fieldset>
+        </form>
     </div>
 
     <hr class="footer-divider">
